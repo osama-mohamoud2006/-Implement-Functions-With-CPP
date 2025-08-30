@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+string upper_case(string s)
+{
+    string res = "";
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (s[i] >= 'a' && s[i] <= 'z')
+            res += (s.at(i) - char(32)); // space is 32 in ascii table
+        else
+            res += s.at(i);
+    }
+    return res;
+}
+
+string lower_case(string s)
+{
+    string res = "";
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (s[i] >= 'A' && s[i] <= 'Z') // s
+        {
+            s.at(i) += char(32); // space is 32 in ascii table
+        }
+
+        res += s.at(i);
+    }
+    return res;
+}
+
+int main()
+{
+    cout << "UPPER: " << upper_case("osa2ma") << endl;
+    cout << "lower: " << lower_case("OSA3MA") << endl;
+}
