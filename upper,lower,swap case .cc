@@ -29,8 +29,26 @@ string lower_case(string s)
     return res;
 }
 
+string swap_case(string str)
+{
+    string res = " ";
+    for (char st : str)
+    {
+        if (st >= 'a' && st <= 'z')
+        {
+            res += (st - char(32));
+        }
+        else if (st >= 'A' && st <= 'Z')
+        {
+            res +=  (st + char(32));
+        }
+    }
+    return res;
+}
+
 int main()
 {
     cout << "UPPER: " << upper_case("osa2ma") << endl;
     cout << "lower: " << lower_case("OSA3MA") << endl;
+    cout<<"invert: "<<swap_case("OsAa")<<endl;
 }
