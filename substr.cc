@@ -14,7 +14,7 @@ string SubStr(string str, short start, short length , bool inc_end=false,short c
 }
 
 int main(){
-    string w = "helloworld!";
+    string w = "hello world!";
     short count=0;
     cout<<"Full string is: "<<w<<endl;
     cout<<"the sub str from start length 5 "<<SubStr(w,0,5)<<endl;
